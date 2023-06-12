@@ -1,16 +1,18 @@
 package src.classes.animalgod.animal;
 import src.classes.animalgod.AnimalGod;
 
-public class Animal extends AnimalGod {
+ public class Animal extends AnimalGod {
     //define
     public boolean throwsFeces;
     public int weight;
+    public static int counter;
 
     //constructor(takes in values we've created)
-    public Animal(boolean throwsFeces, int weight, String name, int age, boolean isGod){
-        super(name, age, isGod);
+    public Animal(boolean throwsFeces, int weight, String name, int age){
+        super(name, age);
         this.throwsFeces = throwsFeces;
         this.weight = weight;
+        increaseCount();
     }
     //methods
 
@@ -18,6 +20,15 @@ public class Animal extends AnimalGod {
         System.out.println("This is a method from animal!");
     }
 
+    public static void increaseCount(){
+        counter += 1;
+    }
+
+
+
+    public static void howManyInstances(){
+      System.out.println(counter);
+    };
 }
 
 

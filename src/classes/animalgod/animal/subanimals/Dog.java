@@ -4,7 +4,7 @@ public class Dog extends Animal {
     public boolean isCute;
 
     public Dog(boolean isCute, boolean throwsFeces, int weight, String name, int age, boolean isGod){
-        super(throwsFeces, weight, name, age, isGod);
+        super(throwsFeces, weight, name, age);
         this.isCute = isCute;
     }
 

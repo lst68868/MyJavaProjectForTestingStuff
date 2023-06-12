@@ -1,18 +1,25 @@
 package src;
+import jdk.nashorn.internal.runtime.regexp.joni.exception.SyntaxException;
 import src.classes.animalgod.AnimalGod;
 import src.classes.animalgod.animal.*;
 import src.classes.animalgod.animal.subanimals.*;
 
 public class Main {
     public static void main(String[] args){
-        Animal.animalMethod();
-        Dog.dogMethod();
-        Cat.catMethod();
+        Animal tree = new Animal(false, 1000, "Spruce", 15_000);
+        Animal bush = new Animal(true, 10, "GeorgeWBush", 10);
+        Animal hedge = new Animal(false, 1, "fund", 6);
+        Animal.howManyInstances();
 
-       Animal NewestAnimal = AnimalGod.createAnimal(false, 32, "Beth", 23, false);
+        tree.name += " sprucy";
+        System.out.println(tree.name);
 
-       System.out.print(NewestAnimal);
-       //This prints memory location. Why not object and all of its properties?
+        Cat mrMeow = new Cat(4,"Yes",false,100,"MR. MEOWWWW", 4);
+        mrMeow.meow = "Meow Princess";
+        System.out.println(mrMeow.name);
+
+
+        //This prints memory location. Why not object and all of its properties?
     }
 }
 

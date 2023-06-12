@@ -3,9 +3,9 @@ package src.classes.animalgod;
 import src.classes.animalgod.animal.Animal;
 
 public class AnimalGod {
-    String name;
-    int age;
-    boolean isGod;
+    public String name;
+    public int age;
+    public boolean isGod;
 
     public AnimalGod(String name, int age, boolean isGod){
         this.name = name;
@@ -13,8 +13,15 @@ public class AnimalGod {
         this.isGod = isGod;
     }
 
+    //Overloaded constructor to handle inherited classes NOT getting god property (setting it to false)
+    public AnimalGod(String name, int age){
+        this.name = name;
+        this.age = age;
+        this.isGod = false;
+    }
+
     public static Animal createAnimal(boolean throwsFeces, int weight, String name, int age, boolean isGod){
-        Animal NewAnimal = new Animal (throwsFeces, weight, name, age, isGod);
+        Animal NewAnimal = new Animal (throwsFeces, weight, name, age);
         System.out.println("A new animal has been created. Here are its properties: " +
                 "\nthrowsFeces: " + throwsFeces +
                "\nweight: " + weight +

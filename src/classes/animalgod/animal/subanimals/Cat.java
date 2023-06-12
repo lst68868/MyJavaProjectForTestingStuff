@@ -1,12 +1,12 @@
 package src.classes.animalgod.animal.subanimals;
 import src.classes.animalgod.animal.Animal;
-public class Cat extends Animal {
+ public class Cat extends Animal {
 
-    int numLives;
-    String meow;
+    public int numLives;
+    public String meow;
 
-    public Cat(int numLives, String meow, boolean throwsFeces, int weight, String name, int age, boolean isGod){
-        super(throwsFeces, weight, name, age, isGod);
+    public Cat(int numLives, String meow, boolean throwsFeces, int weight, String name, int age){
+        super(throwsFeces, weight, name, age);
         this.numLives = numLives;
         this.meow = meow;
     }
